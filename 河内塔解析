@@ -1,0 +1,25 @@
+河内塔问题
+
+1. 每次只能搬一个盘子；
+2. 盘子有大小之分，而且大盘子在下，小盘子在上
+假设有n个金盘子（1,2,3,...n），数字越大表示重量越重，其搬移的演算法如下：
+1.假使n=1则
+2.搬移第1个盘子从A至C
+否则
+3.搬移n-1个盘子从A至B
+4.搬移第n个盘子从A至C
+5.搬移n-1个盘子从B至C
+
+void HanoiTower（int n， char a, char b, charc）
+{
+if (n == 1)
+printf("Move disk 1 from &c -> %c", a,c);
+else
+{
+ /*将A上n-1个盘子借助C移至B*/
+ HanoiTower(n-1,a,c,b);
+ printf("Move disk %d from %c -> %c\n",n,a,c);
+ /*将B上n-1个盘子借助A移至C*/
+ HanoiTower(n-1,b,a,c);
+ }
+ }
