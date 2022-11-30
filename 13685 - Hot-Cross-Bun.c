@@ -50,8 +50,10 @@ int main() {
       scanf(" %c", &grid[i][j]);
     }
   }
+  //
   cross(1, 1, 0);
   if (min == -1) printf("no solution\n");
+  //需要几步来更改全部hot bun成一样的
   else printf("%ld\n", min);
 
   return 0;
